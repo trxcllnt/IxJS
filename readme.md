@@ -4,7 +4,9 @@
 
 *...is a set of libraries to compose synchronous and asynchronous collections and [Array#extras](http://blogs.msdn.com/b/ie/archive/2010/12/13/ecmascript-5-part-2-array-extras.aspx) style composition in JavaScript*
 
-The Interactive Extensions for JavaScript (IxJS) is a library for creating and composing asynchronous sequences using both the `Iterable` and `AsyncIterable` classes.
+The Interactive Extensions for JavaScript (IxJS) brings the Array#extras combinators to iterables, generators, async iterables and async generators.  With the introduction of the `Symbol.iterator` and generators in ES2015, and subsequent introduction of `Symbol.asyncIterator` and async generators, it became obvious we need an abstraction over these data structures for composition, querying and more.  
+
+IxJS unifies both synchronous and asynchronous pull-based collections, just as RxJS unified the world of push-based collections.  RxJS is great for event-based workflows where the data can be pushed at the rate of the producer, however, IxJS is great at I/O operations where you as the consumer can pull the data when you are ready.
 
 ## `Iterable`
 
@@ -320,6 +322,18 @@ for await (let item of mapped) {
   console.log(`Next: ${item}`);
 }
 ```
+
+## Contributing
+
+We are grateful for contributions to the IxJS project.  The IxJS project evolves because of community involvemnent from people such as yourselves.  Please read below on how to get involved.
+
+### [Code Of Conduct](CODE_OF_CONDUCT.md)
+
+The IxJS project has a strict Code of Conduct that must be adhered at all times.  This code of conduct comes from the [Contributor Convenant](http://contributor-covenant.org/).  Please read [the full text](CODE_OF_CONDUCT.md) as to what is and is not permitted.
+
+### Contributing Guide
+
+Read the [Contributing Guide](CONTRIBUTING.md) on how to get involved with the IxJS project.  This includes our development process and how to test your code before committing.
 
 ## License ##
 
